@@ -1,0 +1,19 @@
+name: CI
+on:
+  push:
+    branches: 
+      - main
+jobs:
+  build:
+    name: Setup Xamarin and Mono versions
+    runs-on: windows-latest
+    steps:
+    - name: setup-xamarin
+      uses: Bobile96/Inventur4.0
+      with:
+        mono-version: latest
+        xamarin-ios-version: latest
+        xamarin-mac-version: latest 
+        xamarin-android-version: latest
+        xamarin-windows-version: latest
+        xcode-version: latest
